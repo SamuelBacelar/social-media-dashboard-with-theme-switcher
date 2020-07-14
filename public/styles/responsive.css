@@ -14,7 +14,9 @@
     }
 
     main .main .card {
-        min-width: 50%;
+        flex: 1;
+        min-width: 45%;
+        margin: 10px;
     }
 
     main .overview .overview-cards {
@@ -24,7 +26,9 @@
     }
 
     main .overview .overview-card {
-        min-width: 50%;
+        flex: 1;
+        min-width: 40%;
+        margin: 10px;
     }
 }
 
@@ -41,10 +45,10 @@
     }
 
     main .main .card {
-        min-width: 25%;
+        min-width: 22%;
     }
 
     main .overview .overview-card {
-        min-width: 25%;
+        min-width: 22%;
     }
 }

@@ -12,11 +12,6 @@
     --lime-green: hsl(163, 72%, 41%);
     --bright-red: hsl(356, 69%, 56%);
 
-    --facebook: hsl(195, 100%, 50%);
-    --twitter: hsl(203, 89%, 53%);
-    --instagram: ;
-    --youtube: hsl(348, 97%, 39%);
-
     --toggle-dark-theme: ;
     --toggle: hsl(230, 22%, 74%);
 
@@ -37,9 +32,48 @@ body {
     font-weight: 700;
 }
 
+.gray-font {
+    color: var(--dark-grayish-blue);
+}
+
+.green-font {
+    color: var(--lime-green);
+}
+
+.red-font {
+    color: var(--bright-red);
+}
+
+.facebook-color {
+    background-color: hsl(203, 89%, 53%);
+}
+
+.twitter-color {
+    background-color: hsl(195, 100%, 50%);
+}
+
+.instagram-color {
+    background: linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+}
+
+.youtube-color {
+    background-color: hsl(348, 97%, 39%);
+}
+
+
+
 /*_______________________*/
+.bg-top {
+    width: 100%;
+    height: 230px;
+
+    position: absolute;
+    z-index: -1;
+    background-color: var(--very-pale-blue);
+}
+
 header {
-    padding: 30px;
+    padding: 30px 30px 20px;
 }
 
 header h1 {
@@ -48,12 +82,13 @@ header h1 {
 }
 
 header h2 {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 20px;
+    color: var(--dark-grayish-blue);
 }
 
 header hr {
-    border: 1px solid #d3d3d3;
+    border: 1px solid var(--dark-grayish-blue);
     margin-bottom: 20px;
 }
 
@@ -66,33 +101,79 @@ header .dark-mode {
 }
 
 header .dark-mode p {
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-grayish-blue);
+    margin-right: 20px;
 }
 
 header .dark-mode button {
-    width: 100px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 26px;
+
+    border-radius: 30px;
+
+    background-color: var(--toggle);
+}
+
+header .dark-mode button .dark-mode-toggler {
+    width: 20px;
     height: 20px;
 
-    background-color: #d3d3d3;
+    margin-left: auto;
+    margin-right: 4px;
+
+    border-radius: 50%;
+
+    background-color: var(--very-pale-blue);
 }
 
 
 main .main {
-    padding: 30px;
+    padding: 0 30px 30px;
 }
 
 main .main .card {
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    background-color: var(--light-grayish-blue);
+}
+
+main .main .card .color-stripe {
+    width: 100%;
+    height: 5px;
+}
+
+main .main .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     
     text-align: center;
 
-    margin-bottom: 20px;
+    padding: 20px;    
 }
 
-main .card-header p.name {
-    margin-bottom: 20px;
+
+
+main .card .card-header {
+    display: flex;
+    align-items: center;
+
+    margin: 15px 0;
+}
+
+main .card .card-header img {
+    margin-right: 5px;
+}
+
+main .card .card-header p {
+    color: var(--dark-grayish-blue);
 }
 
 main .card-info {
@@ -104,27 +185,38 @@ main .card-info p.stat-number {
     font-weight: 700;
 }
 
-main .card-info p {
+main .card-info .gray-font {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
 
 main .card .stat-rank {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
 
+main .card .stat-rank img {
+    margin-right: 5px;
 }
 
 main .overview {
-    padding: 30px;
+    padding: 0 30px 30px;
 }
 
 main .overview h2 {
     margin-bottom: 30px;
+    color: var(--dark-grayish-blue);
 }
 
 main .overview .overview-card {
     padding: 20px;
     margin-bottom: 20px;
+
+    background-color: var(--light-grayish-blue);
+
+    border-radius: 5px;
 }
 
 main .overview-card .overview-card-header {
@@ -137,6 +229,7 @@ main .overview-card .overview-card-header {
 main .overview-card .overview-card-header p {
     font-size: 14px;
     font-weight: 700;
+    color: var(--dark-grayish-blue);
 }
 
 main .overview-card .overview-card-info {
@@ -152,6 +245,12 @@ main .overview-card-info p.overview-stat-number {
 }
 
 main .overview-card-info .overview-rank-status {
+    display: flex;
+    align-items: center;
     position: relative;
     bottom: 5px;
+}
+
+main .overview-card-info .overview-rank-status img {
+    margin-right: 5px;
 }
