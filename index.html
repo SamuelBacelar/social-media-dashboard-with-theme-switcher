@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
     <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/dark-theme.css">
     <link rel="stylesheet" href="./public/styles/responsive.css">
 
     <title>Frontend Mentor | [Challenge Name Here]</title>
@@ -15,6 +16,8 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        position: relative;
+        top:200px;
         font-size: 11px;
         text-align: center;
       }
@@ -24,9 +27,9 @@
     </style>
   </head>
   <body>
-    <div class="bg-top"></div>
-    <header class="desktop-container">
-      <div class="title">
+    <header>
+      <div class="header-container desktop-container">
+        <div class="title">
         <h1>
           Social Media Dashboard
         </h1>
@@ -39,9 +42,10 @@
         <p>
           Dark Mode
         </p>
-        <button>
-          <div class="dark-mode-toggler"></div>
+        <button class="switch-btn">
+            <div class="dark-mode-toggler"></div>
         </button>
+      </div>
       </div>
     </header>
 
@@ -335,5 +339,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
       <a href="#">Samuel Bacelar</a>.
     </div>
+    <script src="./public/scripts/script.js"></script>
   </body>
 </html>

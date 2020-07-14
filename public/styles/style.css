@@ -21,10 +21,21 @@
     --light-grayish-blue: hsl(227, 47%, 96%);
     --dark-grayish-blue: hsl(228, 12%, 44%);
     --very-dark-blue: hsl(230, 17%, 14%);
+
+    /* Dark Theme */
+    --very-dark-blue-top: hsl(232, 19%, 15%);
+    --dark-desaturated-blue: hsl(228, 28%, 20%);
+    --desaturated-blue: hsl(228, 34%, 66%);
+    --white:  hsl(0, 0%, 100%);
+    --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
 }
 
 body {
     font-family: 'Inter', sans-serif;
+}
+
+body h2 {
+    color: var(--dark-grayish-blue);
 }
 
 .font-small-bold {
@@ -63,17 +74,14 @@ body {
 
 
 /*_______________________*/
-.bg-top {
+
+header {
     width: 100%;
     height: 230px;
 
     position: absolute;
-    z-index: -1;
+  
     background-color: var(--very-pale-blue);
-}
-
-header {
-    padding: 30px 30px 20px;
 }
 
 header h1 {
@@ -107,7 +115,7 @@ header .dark-mode p {
     margin-right: 20px;
 }
 
-header .dark-mode button {
+header .dark-mode .switch-btn {
     display: flex;
     align-items: center;
     width: 50px;
@@ -116,6 +124,8 @@ header .dark-mode button {
     border-radius: 30px;
 
     background-color: var(--toggle);
+
+    cursor: pointer;
 }
 
 header .dark-mode button .dark-mode-toggler {
@@ -126,12 +136,17 @@ header .dark-mode button .dark-mode-toggler {
     margin-right: 4px;
 
     border-radius: 50%;
-
+ 
     background-color: var(--very-pale-blue);
+    transition: 200ms;
 }
 
-
+main {
+    position: relative;
+    top: 190px;
+}
 main .main {
+ 
     padding: 0 30px 30px;
 }
 
@@ -185,7 +200,7 @@ main .card-info p.stat-number {
     font-weight: 700;
 }
 
-main .card-info .gray-font {
+main .card .card-info .gray-font {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -207,7 +222,7 @@ main .overview {
 
 main .overview h2 {
     margin-bottom: 30px;
-    color: var(--dark-grayish-blue);
+    margin-left: 10px;
 }
 
 main .overview .overview-card {
